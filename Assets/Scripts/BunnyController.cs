@@ -13,6 +13,8 @@ public class BunnyController : MonoBehaviour {
     private int jumpsLeft = 2;
     public float bunnyJumpForce = 500f;
     public Text scoreText;
+    public AudioSource jumpSfx;
+    public AudioSource deathSfx;
 
 	// Use this for initialization
 	void Start () {
@@ -36,13 +38,14 @@ public class BunnyController : MonoBehaviour {
                 if (jumpsLeft == 1)
                 {
                     myRigidBody.AddForce(transform.up * bunnyJumpForce * 0.75f);
-                    jumpsLeft--;
                 }
                 else
                 {
                     myRigidBody.AddForce(transform.up * bunnyJumpForce);
-                    jumpsLeft--;
                 }
+
+                jumpsLeft--;
+                jumpSfx.Play();
             }
 
             myAnimation.SetFloat("vVelocity", myRigidBody.velocity.y);
@@ -82,6 +85,8 @@ public class BunnyController : MonoBehaviour {
             myCollider.enabled = false;
             // Application.LoadLevel(Application.loadedLevel);
             // SceneManager.LoadScene("Game");
+
+            deathSfx.Play();
         }
         else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {

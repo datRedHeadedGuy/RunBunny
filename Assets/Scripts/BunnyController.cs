@@ -36,6 +36,7 @@ public class BunnyController : MonoBehaviour {
                 if (jumpsLeft == 1)
                 {
                     myRigidBody.AddForce(transform.up * bunnyJumpForce * 0.75f);
+                    jumpsLeft--;
                 }
                 else
                 {

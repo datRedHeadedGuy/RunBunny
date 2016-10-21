@@ -10,6 +10,7 @@ public class BunnyController : MonoBehaviour {
     private float bunnyHurtTime = -1;
     private Collider2D myCollider;
     private float startTime;
+    private int jumpsLeft = 2;
     public float bunnyJumpForce = 500f;
     public Text scoreText;
 
@@ -25,9 +26,22 @@ public class BunnyController : MonoBehaviour {
 	void Update () {
         if (bunnyHurtTime == -1)
         {
-            if (Input.GetButtonUp("Jump"))
+            if (Input.GetButtonUp("Jump") && jumpsLeft > 0)
             {
-                myRigidBody.AddForce(transform.up * bunnyJumpForce);
+                if (myRigidBody.velocity.y < 0)
+                {
+                    myRigidBody.velocity = Vector2.zero;
+                }
+
+                if (jumpsLeft == 1)
+                {
+                    myRigidBody.AddForce(transform.up * bunnyJumpForce * 0.75f);
+                }
+                else
+                {
+                    myRigidBody.AddForce(transform.up * bunnyJumpForce);
+                    jumpsLeft--;
+                }
             }
 
             myAnimation.SetFloat("vVelocity", myRigidBody.velocity.y);
@@ -46,7 +60,8 @@ public class BunnyController : MonoBehaviour {
     }
 
     // 
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnCollisionEnter2D(Collision2D collision)
+    {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             foreach (PrefabSpawner spawner in FindObjectsOfType<PrefabSpawner>())
@@ -66,6 +81,10 @@ public class BunnyController : MonoBehaviour {
             myCollider.enabled = false;
             // Application.LoadLevel(Application.loadedLevel);
             // SceneManager.LoadScene("Game");
+        }
+        else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            jumpsLeft = 2;
         }
     }
 }

@@ -1,0 +1,41 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: ATI Radeon HD 4200 (ID=0x9710)
+    Vendor:   ATI
+    VRAM:     1595 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.455 seconds
+Platform assembly: C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\wintermeyer\Documents\Unity Projects\RunBunnyRun\RunBunnyRun_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.681164 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.082536 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 376.
+Total: 0.475421 ms (FindLiveObjects: 0.066924 ms CreateObjectMapping: 0.055587 ms MarkObjects: 0.337183 ms  DeleteObjects: 0.014628 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.692867 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 367.
+Total: 0.912809 ms (FindLiveObjects: 0.128363 ms CreateObjectMapping: 0.074238 ms MarkObjects: 0.669979 ms  DeleteObjects: 0.038399 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 18ec -> priority: 1 

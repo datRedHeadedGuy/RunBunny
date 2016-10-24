@@ -64,7 +64,7 @@ public class BunnyController : MonoBehaviour {
             if (Time.time > bunnyHurtTime + 2)
             {
                 // Application.LoadLevel(Application.loadedLevel);
-                SceneManager.LoadScene("Game");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }

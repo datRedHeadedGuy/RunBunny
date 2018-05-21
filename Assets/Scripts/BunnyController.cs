@@ -11,6 +11,8 @@ public class BunnyController : MonoBehaviour {
     private Collider2D myCollider;
     private float startTime;
     private int jumpsLeft = 2;
+    private float currentBestScore;
+    private float currentScore;
     public float bunnyJumpForce = 500f;
     public Text scoreText;
     public AudioSource jumpSfx;
@@ -93,6 +95,14 @@ public class BunnyController : MonoBehaviour {
             // SceneManager.LoadScene("Game");
 
             deathSfx.Play();
+
+            currentBestScore = PlayerPrefs.GetFloat("BestScore", 0);
+            currentScore = (Time.time - startTime);
+
+            if (currentScore > currentBestScore)
+            {
+                PlayerPrefs.SetFloat("BestScore", currentScore);
+            }
         }
         else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
